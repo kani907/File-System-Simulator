@@ -1,0 +1,6 @@
+include_directories("../src")
+set(TESTS test_file.cpp test_fileManager.cpp test_folder.cpp)
+add_executable(google_testing ${TESTS})
+target_link_libraries(google_testing PRIVATE GTest::gtest_main FilesData)
+include(GoogleTest)
+gtest_discover_tests(google_testing)
